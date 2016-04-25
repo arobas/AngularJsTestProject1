@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+      <script src="/bower_components/angular/angular.js"></script>
+      <script src="js/all.js"></script>
+</head>
+<body ng-app="app">
+  <div class="container" ng-controller="MainController">
+    <div class="row">
+      <div class="col-xs-12 well">
+        <form name="InputForm">    
+        <input name="mnthNum" type="number" ng-model="num" class="form-control"  min="1" max="12" />
+          
+          {{InputForm.mnthNum.$valid}}
+          
+        <number-to-month input="{{num}}"></number-to-month>
+              <pre> {{ num | monthName  }}</pre>
+         
+          </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
