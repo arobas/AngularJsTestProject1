@@ -29,10 +29,10 @@ gulp.task('move', function () {
 
 
 gulp.task('serve', function () {
-    gulp.src('dist').pipe(webserver({
+    gulp.src('.').pipe(webserver({
         port: 48080,
         livereload: true,
-        open: 'http://localhost:48080/index.html'
+        open: 'http://localhost:48080/dist/'
     })).pipe(notify("Running webserver!"));
 });
 
